@@ -86,4 +86,11 @@ public class OrderFormPageObject {
         setNumberForCallUserDataWindow(userNumberForCall);
         clickButtonNextUserDataWindow();
     }
+
+    public By getButUp() {
+        return butUp;
+    }
+    public By getBottomBut() {
+        return bottomBut;
+    }
 }

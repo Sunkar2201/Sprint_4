@@ -41,10 +41,14 @@ public class TestScooterBottonsAndOrderForm {
 
     @Parameterized.Parameters // добавили аннотацию
     public static Object[][] setText() {
-        //переменная для локатора кнопки заказа наверху
-        Object buttonUp = By.xpath(".//button[@class = 'Button_Button__ra12g']");
+        WebDriver tempDriver = new Browsers().webDriverFromChrome();
+        OrderFormPageObject orderForm = new OrderFormPageObject(tempDriver);
+
+        // переменная для локатора кнопки заказа наверху
+        Object buttonUp = orderForm.getButUp();
         //переменная для кнопки заказа внизу
-        Object buttonDown = By.className("Button_Middle__1CSJM");
+        Object buttonDown = orderForm.getBottomBut();
+
         return new Object[][] {
                 {buttonUp, "ПоЛиНа", "Ох", "Санкт-Петербург, улица Шоссейная, дом 234", "77777777777"},
                 {buttonUp, "саша", "васильев", "село Северное>, улица Центральная, дом 30", "87078888888"},
