@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import static org.junit.Assert.assertEquals;
+import static testscooterpageobjects.Urls.MAIN_URL;
 
 @RunWith(Parameterized.class)
 public class TestScooterDropDown {
@@ -44,7 +45,7 @@ public class TestScooterDropDown {
     public void checkFaqDropDown() {
 
         // перешли на страницу тестового приложения
-        driver.get("https://qa-scooter.praktikum-services.ru/");
+        driver.get(MAIN_URL);
 
         //дали разрешение на куки
         CookiesWindowPageObject objCookiesAllow = new CookiesWindowPageObject(driver);
