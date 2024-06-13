@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class OrderWindowPageObject {
-    private static WebDriver driver;
+    private WebDriver driver;
 
     public OrderWindowPageObject(WebDriver driver){
         this.driver = driver;
